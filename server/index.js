@@ -26,7 +26,7 @@ app.get('/weather/:_city',function(req,res){
   console.log(city);
   //var query = 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&appid='+API_KEY_WEATHER;
   var host = 'api.openweathermap.org';
-  var path = '/data/2.5/weather?q='+city+'&units=metric&appid='+API_KEY_WEATHER;
+  var path = '/data/2.5/weather?q='+city.trim().replace(' ','%20')+'&units=metric&appid='+API_KEY_WEATHER;
 
   var options = {
     host : host,
@@ -47,7 +47,11 @@ app.get('/weather/:_city',function(req,res){
         try {
           // Parse the data
           var forecast = JSON.parse(body);
-          res.json(forecast);
+          var weather = {};
+          weather["temperature"] = forecast.main.temp;
+          weather["humidity"] = forecast.main.humidity;
+          weather["wind_speed"] = forecast.wind.speed;
+          res.json(weather);
         } catch(error) {
           console.log(error);
         }

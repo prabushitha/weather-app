@@ -7,5 +7,5 @@ import { Component, Input,ViewEncapsulation } from '@angular/core';
 })
 
 export class CityComponent {
-  @Input() cityname: string;
+  @Input() name: string;
 }

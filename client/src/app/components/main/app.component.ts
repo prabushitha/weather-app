@@ -28,6 +28,7 @@ export class AppComponent implements OnInit{
   updateMarker($event){
     console.log($event);
     //let self = this;
+    this.city.isweather = false;
     this.city.lat = $event.coords.latitude;
     this.city.lng = $event.coords.longitude;
 
@@ -39,8 +40,11 @@ export class AppComponent implements OnInit{
                     if (status == google.maps.GeocoderStatus.OK) {
                         if (results[1]) {
                             //once running this updates the view realtime
+
+
                             this.zone.run(() => {
-                                this.city.name = results[1].formatted_address;
+                                var address_parts = results[1].formatted_address.split(",");
+                                this.city.name = address_parts[address_parts.length-2];//results[1].formatted_address;
                             });
 
                             console.log(results); // details address

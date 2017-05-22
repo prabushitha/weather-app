@@ -1,0 +1,6 @@
+<button (click)="getweather()">Get Weather</button>
+<div *ngIf="city.isweather">
+  <h1>Temperature {{city.temperature}}</h1>
+  <h3>Humidity {{city.humidity}}</h3>
+  <h3>Wind Speed {{city.wind_speed}}</h3>
+</div>

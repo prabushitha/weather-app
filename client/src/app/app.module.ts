@@ -10,11 +10,13 @@ import { AgmCoreModule } from "angular2-google-maps/core";
 import { AppComponent } from './components/main/app.component';
 import { MapComponent } from './components/map/map.component';
 import { CityComponent } from './components/city/city.component';
+import { WeatherComponent } from './components/weather/weather.component';
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    CityComponent
+    CityComponent,
+    WeatherComponent
   ],
   imports: [
     AgmCoreModule.forRoot({
