@@ -1,0 +1,3 @@
+
+<city *ngIf="city" [cityname]="city.name"></city>
+<map [marker]="city" (markerChange)="updateMarker($event)"></map>
