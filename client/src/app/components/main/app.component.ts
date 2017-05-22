@@ -27,7 +27,7 @@ export class AppComponent implements OnInit{
 
   updateMarker($event){
     console.log($event);
-    let self = this;
+    //let self = this;
     this.city.lat = $event.coords.latitude;
     this.city.lng = $event.coords.longitude;
 
@@ -39,9 +39,10 @@ export class AppComponent implements OnInit{
                     if (status == google.maps.GeocoderStatus.OK) {
                         if (results[1]) {
                             //once running this updates the view realtime
-                            self.zone.run(() => {
-                                self.city.name = results[1].formatted_address;
+                            this.zone.run(() => {
+                                this.city.name = results[1].formatted_address;
                             });
+
                             console.log(results); // details address
                         } else {
                             console.log('Location not found');
@@ -49,6 +50,6 @@ export class AppComponent implements OnInit{
                     } else {
                         console.log('Geocoder failed due to: ' + status);
                     }
-                });
+                }.bind(this));
   }
 }
