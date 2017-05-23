@@ -1,4 +1,51 @@
+<html>
+<head>
+<style>
+  /*body {*/
+    /*background-image: url("../../assets/weather.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center top;*/
+    /*background-attachment: fixed;*/
+    /*background-size: 100% 100%;*/
+  /*}*/
+
+
+
+  body
+  {
+    background-color: white;
+    background-image: url("../../assets/weather.jpg");
+    /*background-size: cover;*/
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+</style>
+
+</head>
+
+<body>
+<br>
+<h1 style="color: darkblue; font-family: Helvetica">&nbsp;&nbsp;&nbsp;Weather App - Advanced Web Development</h1>
 
 <city *ngIf="city" [name]="city.name"></city>
-<weather [city]="city"></weather>
-<map [marker]="city" (markerChange)="updateMarker($event)"></map>
+<weather style="display: block;" [city]="city"></weather>
+<br>
+
+<div class="row">
+
+  <div align="center">
+<div style="height: 600px; width: 1000px;">
+  <map [marker]="city" (markerChange)="updateMarker($event)"></map>
+</div>
+  </div>
+
+</div>
+
+
+</body>
+
+</html>
+
+
+

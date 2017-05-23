@@ -1,4 +1,7 @@
-<button (click)="getweather()">Get Weather</button>
+
+<div align="center">
+<button class="button5" style="color: white; font-family: Helvetica; align-self: center"  (click)="getweather()">Get Weather</button>
+</div>
 <div *ngIf="city.isweather">
   <h1>Temperature {{city.temperature}}</h1>
   <h3>Humidity {{city.humidity}}</h3>
