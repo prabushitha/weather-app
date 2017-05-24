@@ -20,14 +20,47 @@
     background-repeat: no-repeat;
     background-position: center top;
   }
+
+  #menu{
+    text-align: center;
+    color: black;
+  }
+  .menuitem{
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .menuitem:hover{
+    background-color: black;
+    color: white !important;
+  }
 </style>
 
 </head>
 
 <body>
+
+<!--<div id="menu">-->
+  <!--<a href="#home_content" class="menuitem">Home</a>-->
+  <!--<a href="#about_content" class="menuitem">About</a>-->
+  <!--<a href="#mission_content" class="menuitem">Mission</a>-->
+  <!--<a href="#contact_content" class="menuitem">Contact</a>-->
+<!--</div>-->
+
+<nav>
+  <div class="logo">
+    <h3> &nbsp;&nbsp;Weather App</h3>
+  </div>
+
+  <ul class="list-item">
+    <li><a href="#">Weather Through Map</a></li>
+    <li><a href="#">Weather Through Search </a></li>
+
+  </ul>
+</nav>
+
 <br>
-<h1 align="center"> &nbsp;&nbsp;&nbsp;Weather App</h1>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instructions: Place the map marker to retrieve the city of which you need to obtain the weather </p>
+<!--<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instructions: Place the map marker to retrieve the city of which you need to obtain the weather </p>-->
 
 <city *ngIf="city" [name]="city.name"></city>
 <weather style="display: block;" [city]="city"></weather>
@@ -42,6 +75,23 @@
   </div>
 
 </div>
+
+<script>
+  $('.toggle').click(function () {
+    "use strict";
+    $('nav ul').slideToggle();
+  });
+
+
+
+  $(window).resize(function () {
+    "use strict";
+    if ($(window).width() > 780) {
+      $('nav ul').removeAttr('style');
+    }
+  });
+
+</script>
 
 
 </body>
