@@ -16,6 +16,7 @@ export class WeatherComponent {
   }
   getweather(){
     //alert(this.city.name);
+    this.city.weather_state = "requested";
     this.weatherService.getCityWeather(this.city.name).subscribe(
       data => this.updateWeather(data),
       error => alert(error)
@@ -23,6 +24,7 @@ export class WeatherComponent {
   }
   updateWeather(weather){
     console.log(weather);
+    this.city.weather_state = "served";
     this.city.isweather = true;
     this.city.temperature = weather.temperature;
     this.city.humidity = weather.humidity;

@@ -29,6 +29,7 @@ export class AppComponent implements OnInit{
     console.log($event);
     //let self = this;
     this.city.isweather = false;
+    this.city.weather_state = "not requested";
     this.city.lat = $event.coords.latitude;
     this.city.lng = $event.coords.longitude;
 

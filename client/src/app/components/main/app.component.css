@@ -1,3 +1,17 @@
+#menu{
+  text-align: center;
+  color: black;
+}
+.menuitem{
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.menuitem:hover{
+  background-color: black;
+  color: white !important;
+}
+
 p{
   color: lightgrey;
   font-family: Helvetica;
@@ -124,4 +138,3 @@ nav {
 
 
 /*   End media query   */
-

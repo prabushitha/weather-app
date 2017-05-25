@@ -4,6 +4,7 @@ export class City{
   name:string;
 
   isweather:boolean = false;
+  weather_state:string = "not requested";
   temperature:number;
   humidity:number;
   wind_speed:number;

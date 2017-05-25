@@ -1,9 +1,28 @@
 
+<div *ngIf="city.isweather" align="center">
+  <div class="c-2"></div>
+  <div class="c-10">
+      <div class="c-4">
+        <img class="icon" src="../../assets/sun.svg" />
+      </div>
+      <div class="c-8">
+        <div class="c-4">
+          <p><b>Temperature</b> {{city.temperature}}</p>
+        </div>
+        <div class="c-4">
+          <p><b>Humidity</b> {{city.humidity}}</p>
+        </div>
+        <div class="c-4">
+          <p><b>Wind Speed</b> {{city.wind_speed}}</p>
+        </div>
+      </div>
+  </div>
+</div>
+<div *ngIf="!city.isweather && city.weather_state=='requested'" align="center">
+  <div class="c-12">
+    <img class="icon" src="../../assets/hourglass1.svg" />
+  </div>
+</div>
 <div align="center">
 <button class="button5" style="color: white; font-family: Helvetica; align-self: center"  (click)="getweather()">Get Weather</button>
-</div>
-<div *ngIf="city.isweather">
-  <h1>Temperature {{city.temperature}}</h1>
-  <h3>Humidity {{city.humidity}}</h3>
-  <h3>Wind Speed {{city.wind_speed}}</h3>
 </div>
