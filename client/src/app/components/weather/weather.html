@@ -6,15 +6,26 @@
         <img class="icon" src="../../assets/sun.svg" />
       </div>
       <div class="c-8">
-        <div class="c-4">
-          <p><b>Temperature</b> {{city.temperature}} ºC</p>
+        <div class="row">
+          <table>
+            <tr>
+              <td><b>Temperature</b> {{city.temperature}} ºC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td><b>Humidity</b> {{city.humidity}} %&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td><b>Wind Speed</b> {{city.wind_speed}} km/h</td>
+            </tr>
+          </table>
+          <br>
+
         </div>
-        <div class="c-4">
-          <p><b>Humidity</b> {{city.humidity}} %</p>
-        </div>
-        <div class="c-4">
-          <p><b>Wind Speed</b> {{city.wind_speed}} km/h</p>
-        </div>
+        <!--<div class="c-4">-->
+          <!--<p><b>Temperature</b> {{city.temperature}} ºC</p>-->
+        <!--</div>-->
+        <!--<div class="c-4">-->
+          <!--<p><b>Humidity</b> {{city.humidity}} %</p>-->
+        <!--</div>-->
+        <!--<div class="c-4">-->
+          <!--<p><b>Wind Speed</b> {{city.wind_speed}} km/h</p>-->
+        <!--</div>-->
       </div>
   </div>
 </div>
