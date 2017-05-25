@@ -2,7 +2,7 @@
   <div class="logo">
     <h3> &nbsp;&nbsp;Weather App</h3>
   </div>
-  <search (onresult)="updateMarker($event)"></search>
+  <search (onresult)="updateMarker($event)" style="float:right;margin-right:10px;"></search>
 
 
 </nav>
@@ -16,7 +16,7 @@
 
   <div align="center">
 <div style="height: 600px; width: 1000px;">
-  <map [marker]="city" (markerChange)="updateMarker($event)"></map>
+  <map [marker]="city" [map]="map" (markerChange)="updateMarker($event)"></map>
 </div>
   </div>
 

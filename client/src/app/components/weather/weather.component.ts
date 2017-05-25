@@ -29,5 +29,6 @@ export class WeatherComponent {
     this.city.temperature = weather.temperature;
     this.city.humidity = weather.humidity;
     this.city.wind_speed = weather.wind_speed;
+    this.city.pressure = weather.pressure;
   }
 }

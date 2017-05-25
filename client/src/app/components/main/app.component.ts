@@ -1,6 +1,7 @@
 import { Component, OnInit,NgZone } from '@angular/core';
 import { AgmCoreModule, MouseEvent,GoogleMapsAPIWrapper,MapsAPILoader } from 'angular2-google-maps/core';
 import {City} from '../../models/city';
+import {Map} from '../../models/map';
 
 declare var google: any;
 
@@ -12,10 +13,12 @@ declare var google: any;
 export class AppComponent implements OnInit{
   //title = 'app works!';
   city:City;
+  map:Map;
 
   //ngZone is to realtime update the scene
   constructor(private zone: NgZone){
     this.city = new City({lat:6.91415,lng:79.9694});
+    this.map = new Map();
   }
   ngOnInit() {
     //get the user geolocation
@@ -32,6 +35,10 @@ export class AppComponent implements OnInit{
     this.city.weather_state = "not requested";
     this.city.lat = $event.coords.latitude;
     this.city.lng = $event.coords.longitude;
+    if($event["auto_focus"]!=undefined && $event["auto_focus"]==true){
+      this.map.focus_lat = this.city.lat;
+      this.map.focus_lng = this.city.lng;
+    }
 
 
     //city name

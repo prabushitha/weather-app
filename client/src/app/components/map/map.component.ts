@@ -1,6 +1,7 @@
 import { Component, Input,Output, EventEmitter } from '@angular/core';
 import { AgmCoreModule, MouseEvent } from 'angular2-google-maps/core';
 import {City} from '../../models/city';
+import {Map} from '../../models/map';
 
 
 @Component({
@@ -14,6 +15,7 @@ export class MapComponent {
   zoom:number = 11;
   focus_lat: number =  6.914157271085624;
   focus_lng: number =  79.969482421875;
+  @Input() map:Map;
   @Input() marker: City;
   @Output() markerChange: EventEmitter<any> = new EventEmitter();
 

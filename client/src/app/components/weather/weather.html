@@ -1,17 +1,17 @@
 
 <div *ngIf="city.isweather" align="center">
-  <div class="c-2"></div>
-  <div class="c-10">
-      <div class="c-4">
+  <div>
+      <div>
         <img class="icon" src="../../assets/sun.svg" />
       </div>
-      <div class="c-8">
+      <div>
         <div class="row">
           <table>
             <tr>
-              <td><b>Temperature</b> {{city.temperature}} ºC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-              <td><b>Humidity</b> {{city.humidity}} %&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-              <td><b>Wind Speed</b> {{city.wind_speed}} km/h</td>
+              <td><b>Temperature</b> {{city.temperature}} ºC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td><b>Humidity</b> {{city.humidity}} %&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td><b>Wind Speed</b> {{city.wind_speed}} km/h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td><b>Pressure</b> {{city.pressure}} mbar</td>
             </tr>
           </table>
           <br>
@@ -30,7 +30,7 @@
   </div>
 </div>
 <div *ngIf="!city.isweather && city.weather_state=='requested'" align="center">
-  <div class="c-12">
+  <div>
     <img class="icon" src="../../assets/hourglass1.svg" />
   </div>
 </div>

@@ -7,6 +7,7 @@ export class City{
   weather_state:string = "not requested";
   temperature:number;
   humidity:number;
+  pressure:number;
   wind_speed:number;
   constructor(data){
     this.lat = data.lat;

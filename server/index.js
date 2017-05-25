@@ -47,10 +47,12 @@ app.get('/weather/:_city',function(req,res){
         try {
           // Parse the data
           var forecast = JSON.parse(body);
+          console.log(forecast);
           var weather = {};
           weather["temperature"] = forecast.main.temp;
           weather["humidity"] = forecast.main.humidity;
           weather["wind_speed"] = forecast.wind.speed;
+          weather["pressure"] = forecast.main.pressure;
           res.json(weather);
         } catch(error) {
           console.log(error);

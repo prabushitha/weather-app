@@ -29,7 +29,7 @@ export class SearchComponent {
       //load Places Autocomplete
       this.mapsAPILoader.load().then(() => {
         let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-          types: ["(cities)"]
+          types: ["(regions)"]
         });
 
         autocomplete.addListener("place_changed", () => {
@@ -43,10 +43,14 @@ export class SearchComponent {
               return;
             }
             //console.log(self);
-            let result = {coords:{
+            let result = {
+            coords:{
               latitude:place.geometry.location.lat(),
               longitude:place.geometry.location.lng()
-            }};
+            },
+            auto_focus:true
+
+          };
             self.onresult.emit(result);
             //set latitude, longitude and zoom
             //this.latitude = place.geometry.location.lat();
