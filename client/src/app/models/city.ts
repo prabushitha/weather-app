@@ -2,6 +2,8 @@ export class City{
   lat:number;
   lng:number;
   name:string;
+  country:string;
+  currency:string; 
 
   isweather:boolean = false;
   weather_state:string = "not requested";

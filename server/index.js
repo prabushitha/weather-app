@@ -1,4 +1,5 @@
 var http = require('http');
+var https = require('https');
 var bodyParser = require('body-parser');
 var express = require('express');
 var app = express();
@@ -17,9 +18,10 @@ app.use(function (req, res, next) {
 });
 //create index routes
 app.get('/',function(req,res){
-	res.send("Welcome to music app");
+	res.send("Welcome to weather app server");
 });
 
+//https://restcountries.eu/rest/v2/name/sri%20lanka
 app.get('/weather/:_city',function(req,res){
 
   var city = req.params._city;

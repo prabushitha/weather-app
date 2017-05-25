@@ -12,12 +12,14 @@ import { MapComponent } from './components/map/map.component';
 import { CityComponent } from './components/city/city.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { SearchComponent } from './components/search/search.component';
+import { CurrencyComponent } from './components/currency/currency.component';
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
     CityComponent,
     WeatherComponent,
+    CurrencyComponent,
     SearchComponent
   ],
   imports: [

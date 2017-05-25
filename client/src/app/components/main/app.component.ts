@@ -52,6 +52,7 @@ export class AppComponent implements OnInit{
 
                             this.zone.run(() => {
                                 var address_parts = results[1].formatted_address.split(",");
+                                this.city.country = address_parts[address_parts.length-1];
                                 this.city.name = address_parts[address_parts.length-2];//results[1].formatted_address;
                             });
 

@@ -8,8 +8,9 @@
 </nav>
 <!--<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instructions: Place the map marker to retrieve the city of which you need to obtain the weather </p>-->
 
-<city *ngIf="city" [name]="city.name"></city>
+<city *ngIf="city" [name]="city.name" [country]="city.country"></city>
 <weather style="display: block;" [city]="city"></weather>
+<currency [city]="city"></currency>
 <br>
 
 <div class="row">
