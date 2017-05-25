@@ -1,7 +1,7 @@
 <sebm-google-map style="height: 550px"
   [zoom]="zoom"
-  [latitude]="focus_lat"
-  [longitude]="focus_lng"
+  [latitude]="marker.lat"
+  [longitude]="marker.lng"
   (mapClick)="mapClicked($event)"
   >
   <sebm-google-map-marker [latitude]="marker.lat" [longitude]="marker.lng"></sebm-google-map-marker>

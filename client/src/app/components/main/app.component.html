@@ -2,11 +2,10 @@
   <div class="logo">
     <h3> &nbsp;&nbsp;Weather App</h3>
   </div>
+  <search (onresult)="updateMarker($event)"></search>
 
 
 </nav>
-
-<br>
 <!--<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instructions: Place the map marker to retrieve the city of which you need to obtain the weather </p>-->
 
 <city *ngIf="city" [name]="city.name"></city>
